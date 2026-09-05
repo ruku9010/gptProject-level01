@@ -10,9 +10,8 @@ function App() {
   ];
 
   const isAdmin = true;
-const isLoggedIn = false;
+  const isLoggedIn = false;
 
-      
   return (
     <>
       {isAdmin && <h1>Welcome Admin</h1>}
@@ -24,12 +23,7 @@ const isLoggedIn = false;
       </BoxContent>
 
       {users.map((user) => (
-        <UserCard
-          key={user.id}
-          id={user.id}
-          name={user.name}
-          age={user.age}
-        />
+        <UserCard key={user.id} id={user.id} name={user.name} age={user.age} />
       ))}
     </>
   );
