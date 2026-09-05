@@ -1,13 +1,19 @@
-interface PropsType {
-    name: string;
-    age: number
+interface UserCardProps {
+  id: number;
+  name: string;
+  age: number;
 }
 
-export default function UserCard(props: PropsType){
-    return (
-        <div>
-            <p>Name: {props.name}</p>
-            <p>Age: {props.age}</p>
-        </div>
-    )
+export default function UserCard({
+  id,
+  name,
+  age,
+}: UserCardProps) {
+  return (
+    <div>
+      <p>ID: {id}</p>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
 }
